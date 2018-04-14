@@ -15,16 +15,17 @@ import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import org.junit.Test;
 
-public class Ziso8583clientTest {
+public class iso8583client {
 
     volatile static IsoMessage capturedResponse;
-@Test
-    public  void iso8583clientTesting() {
+
+    public static void main(String[] args) {
         try {
             // 1. Create a MessageFactory.
             final MessageFactory<IsoMessage> messageFactory = ConfigParser.createDefault();
             messageFactory.setCharacterEncoding(StandardCharsets.US_ASCII.name());
-            messageFactory.setUseBinaryMessages(false);
+         //   messageFactory.setUseBinaryMessages(false);
+            messageFactory.setUseBinaryMessages(true);
             //messageFactory.setAssignDate(true);  // Sets field 7.
 
             final SocketAddress socketAddress = new InetSocketAddress("127.0.0.1", 8585);
