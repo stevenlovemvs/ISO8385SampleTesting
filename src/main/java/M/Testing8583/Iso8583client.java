@@ -15,11 +15,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import org.junit.Test;
 
-public class iso8583client {
+public class Iso8583client {
 
     volatile static IsoMessage capturedResponse;
 
-    public static void main(String[] args) {
+    public static void RunIso8583client() {
         try {
             // 1. Create a MessageFactory.
             final MessageFactory<IsoMessage> messageFactory = ConfigParser.createDefault();

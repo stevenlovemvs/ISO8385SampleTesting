@@ -2,7 +2,6 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>M</groupId>
   <artifactId>Testing8583</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -30,7 +29,7 @@
     		<artifactId>maven-surefire-plugin</artifactId>   
     		<configuration>   
         		<includes>
-			        <include>**/Ziso8583clientTest.java</include>
+			        <include>**/iso8583clientTest.java</include>
 					<include>**/AppTest.java</include>
 				</includes>
     		</configuration>  
@@ -45,7 +44,7 @@
                     <archive>
                         <manifest>
                             <!-- 此处指定main方法入口的class -->
-                            <mainClass>com.xxx.uploadFile</mainClass>
+                            <mainClass>M.Testing8583.iso8583client</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -117,4 +116,5 @@
   <issueManagement>
   	<url>https://github.com/kpavlov/jreactive-8583/issues</url>
   </issueManagement>
+  <groupId>M</groupId>
 </project>

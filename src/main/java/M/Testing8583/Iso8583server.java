@@ -13,11 +13,11 @@ import io.netty.channel.ChannelHandlerContext;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
-public class iso8583server {
+public class Iso8583server {
 
     volatile static IsoMessage capturedRequest;
 
-    public static void main(String[] args) {
+    public static void RunIso8583server() {
         try {
             // 1. Create a MessageFactory.
             final MessageFactory<IsoMessage> messageFactory = ConfigParser.createDefault();
